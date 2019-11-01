@@ -19,7 +19,7 @@ function getAll(){
   for (var i = 0; i < updated.length; i++){
     for (var j = 0; j < sheet.length; j++){
       if (updated[i].course === sheet[j][0]){
-        SpreadsheetApp.getActiveSheet().getRange('Course_List!C' + j+2).setValue(updated[i].term + ' ' + updated[i].year);
+        SpreadsheetApp.getActiveSheet().getRange('Course_List!C' + (j+2)).setValue(updated[i].term + ' ' + updated[i].year);
         Logger.log('match');
       }
     }
